@@ -1,0 +1,42 @@
+@import "variables";
+
+.single_service {
+  background-color: rgba(27, 177, 152, 0.062);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid transparent;
+  margin-bottom: 25px;
+  @extend%transition;
+  i {
+    font-size: 30px;
+    color: rgb(27, 177, 152);
+  }
+
+  h4 {
+    text-transform: capitalize;
+    font-weight: bolder;
+    padding: 15px 0 10px 0;
+
+    span {
+      color: rgb(27, 177, 152);
+    }
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.5);
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &:hover {
+    border: 1px solid rgb(27, 177, 152);
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,134 @@
+@import "variables";
+.tab {
+    position: fixed;
+    top: 50%;
+    right: -30px;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    height: 300px;
+    
+    /*Stylethebuttonsinsidethetab*/
+    button
+   {
+      display: block;
+      color: white;
+      width: 50px;
+      height: 50px;
+      margin: 20px 15px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      background-color: rgb(132, 143, 146);
+      font-size: 25px;
+      border: none;
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      @extend %transition;
+      /*Changebackgroundcolorofbuttonsonhover*/
+      &:hover {
+          background-color: rgb(27, 177, 152);
+      }
+  
+      /* Create an active/current tablink class */
+      &.active {
+        background-color: rgb(27, 177, 152);
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 50px;
+        top: 0;
+        right: 40%;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        z-index: -1;
+        @extend %transition;
+      }
+      &:hover::before {
+        content: "Home";
+        width: 120px;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 50px;
+        height: 50px;
+        text-transform: capitalize;
+        background-color: rgb(27, 177, 152);
+          border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+      &:hover:nth-child(2):before {
+        content: "about";
+        width: 120px;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 50px;
+        height: 50px;
+        text-transform: capitalize;
+        background-color: rgb(27, 177, 152);
+          border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+      &:hover:nth-child(3):before {
+        content: "Portfolio";
+        width: 120px;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 50px;
+        height: 50px;
+        text-transform: capitalize;
+        background-color: rgb(27, 177, 152);
+          border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+      &:hover:nth-child(4):before {
+        content: "Services";
+        width: 120px;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 50px;
+        height: 50px;
+        text-transform: capitalize;
+        background-color: rgb(27, 177, 152);
+          border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+      &:hover:nth-child(5):before {
+        content: "Blog";
+        width: 120px;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 50px;
+        height: 50px;
+        text-transform: capitalize;
+        background-color: rgb(27, 177, 152);
+          border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+      &:hover:nth-child(6):before {
+        content: "Contact";
+        width: 120px;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 15px;
+        line-height: 50px;
+        height: 50px;
+        text-transform: capitalize;
+        background-color: rgb(27, 177, 152);
+          border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+    }
+  }

@@ -3,7 +3,8 @@
   .blogimg {
     width: 100%;
     height: 230px;
-    overflow: hidden;
+    overflow: hidden !important;
+
     img {
       width: 100%;
       height: 230px;
@@ -14,6 +15,7 @@
       -ms-border-radius: 5px;
       -o-border-radius: 5px;
       @extend %transition;
+      overflow: hidden !important;
     }
   }
 
@@ -65,7 +67,8 @@
     -moz-border-radius: 5px !important;
     -ms-border-radius: 5px !important;
     -o-border-radius: 5px !important;
-}
+    overflow: hidden !important;
+  }
 
   & .col-4:hover .blog_content {
     border-bottom: 5px solid rgb(27, 177, 152);
